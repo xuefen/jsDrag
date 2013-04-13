@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>拖动</title>
+    <script type="text/javascript" src="jQuery.min.js"></script>
+	<script type="text/javascript" src="imcDrag.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	    $("#drag1").imcDrag("#handle",function(){
+		   $("#status").html("div1开始拖动");
+		},function(){
+		   $("#status").html("div1已经停止");
+		});
+        
+		$("#drag2").imcDrag(undefined,function(){
+		   $("#status").html("div2开始拖动");
+		},function(){
+		   $("#status").html("div2已经停止");
+		});
+	});
+	</script>
+</head>
+<body>
+<div id="status" style="color:red;"></div>
+<div style="position:absolute;background-color:White;border:solid black;" id="drag1">
+     <div style="background-color:Gray;border-bottom:solid black;padding:3px;font-family:Sans-Serif;font-weight:bold;" id="handle">
+    　  拖动手柄
+    　</div>
+    　  <div>
+    　  <p>div1 div1 div1 div1 div1 div1 This is a test.Testing,testing</p></div>
+</div>
+
+<div style="position:absolute;background-color:White;border:solid black;width:200px; top:200px;" id="drag2">
+       div2 div2 div2 div2 div2 
+	   拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖
+	   动拖动拖动拖动拖动拖动
+	   拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖动拖
+	   动拖动拖动拖动拖动拖动拖动  
+</div>
+</body>
+</html>
